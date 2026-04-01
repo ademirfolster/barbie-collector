@@ -1,0 +1,1 @@
+## Este projeto está sendo baseado em estudos recentes de JS puro, para aprender como funcionam os frameworks por baixo do pano, como Angular, React, Vue, etc. Pois estarei retomando as atividades em Next.JS e preciso de uma boa base sólida.
