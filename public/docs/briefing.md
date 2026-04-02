@@ -264,3 +264,215 @@ júnior inicial → júnior sólido (quase pleno visual)
 NÃO começa pelo CSS bonito
 NÃO mistura lógica com estilo
 NÃO faz tudo de uma vez
+
+---
+
+---
+
+Perfeito. Agora a gente vai fazer CSS do jeito certo — sem tentativa e erro, com método.
+
+Vou te guiar como se estivesse do teu lado.
+
+🧠 ESTRATÉGIA GERAL (não pula isso)
+
+Você NÃO vai sair estilizando tudo.
+
+Você vai seguir essa ordem:
+
+1. Base (reset + body)
+2. Container
+3. Sections (espaçamento)
+4. Layout (hero, navbar, etc)
+5. Componentes (botão, card)
+6. Refino visual
+
+👉 Se pular ordem = bagunça
+
+🧱 1. RESET + BASE
+
+Cola isso no topo do seu CSS:
+
+- {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  }
+  BODY
+  body {
+  font-family: 'Poppins', sans-serif;
+  background: #f5e9dc;
+  color: #111;
+  }
+  📦 2. CONTAINER
+  .container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 2rem;
+  }
+  🧩 3. SECTIONS (organização vertical)
+  section {
+  margin-bottom: 4rem;
+  }
+  🔝 4. NAVBAR (primeiro layout)
+  .navBar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  padding: 1.5rem 2rem;
+  }
+  Logo
+  .nav-left img {
+  width: 120px;
+  }
+  🎯 BOTÃO (cria padrão agora)
+  .btn-default {
+  background: #c9a24a;
+  color: white;
+
+  padding: 10px 20px;
+  border-radius: 999px;
+
+  text-decoration: none;
+  font-weight: 600;
+
+  transition: 0.3s;
+  }
+
+.btn-default:hover {
+opacity: 0.85;
+}
+🔥 5. HERO (parte mais importante)
+
+Agora vem o nível.
+
+Container do hero
+.hero {
+display: flex;
+align-items: center;
+gap: 40px;
+}
+Imagem
+.hero-image {
+width: 100%;
+max-width: 400px;
+border-radius: 16px;
+}
+Conteúdo
+.hero-content {
+display: flex;
+flex-direction: column;
+gap: 16px;
+}
+Título
+.hero-title {
+font-size: 2.5rem;
+font-family: 'Playfair Display', serif;
+}
+Subtítulo
+.hero-subtitle {
+color: #666;
+line-height: 1.6;
+}
+Preço
+.hero-price {
+font-size: 1.5rem;
+font-weight: bold;
+color: #6b3e2e;
+}
+🧩 6. ABOUT
+.about {
+padding: 3rem 0;
+}
+.about-content {
+max-width: 600px;
+margin: 0 auto;
+text-align: center;
+}
+.about-text {
+line-height: 1.6;
+color: #666;
+}
+💎 7. FEATURES
+.features {
+display: flex;
+justify-content: center;
+gap: 30px;
+}
+.feature-item {
+display: flex;
+align-items: center;
+gap: 8px;
+
+background: white;
+padding: 10px 16px;
+border-radius: 12px;
+}
+.feature-icon {
+color: #c9a24a;
+}
+🖼️ 8. GALERIA
+.gallery {
+text-align: center;
+}
+.gallery-principal {
+width: 100%;
+max-width: 400px;
+margin-bottom: 20px;
+border-radius: 12px;
+}
+.gallery-grid {
+display: flex;
+justify-content: center;
+gap: 10px;
+}
+.thumb {
+width: 80px;
+cursor: pointer;
+border-radius: 8px;
+}
+🗣️ 9. TESTIMONIALS
+.testimonials {
+display: flex;
+gap: 20px;
+}
+.testimonial {
+background: white;
+padding: 20px;
+border-radius: 12px;
+flex: 1;
+}
+🚀 10. CTA
+.cta-section {
+text-align: center;
+}
+.cta-title {
+font-size: 1.8rem;
+margin-bottom: 10px;
+}
+.cta-text {
+color: #666;
+margin-bottom: 20px;
+}
+🔻 11. FOOTER
+.footer {
+text-align: center;
+padding: 2rem;
+background: #3e2419;
+color: white;
+}
+⚠️ AGORA O MAIS IMPORTANTE
+
+👉 NÃO tenta “deixar bonito perfeito” agora
+
+👉 Primeiro verifica:
+
+layout funcionando?
+nada quebrado?
+alinhamento ok?
+🧠 CHECK FINAL (antes de avançar)
+hero lado a lado
+navbar alinhada
+sections com espaço
+nada colado
+imagens proporcionais
